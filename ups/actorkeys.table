@@ -1,3 +1,0 @@
-setupRequired(ics_mhs_actorcore)
-
-pathPrepend(PYTHONPATH, ${PRODUCT_DIR}/python)
