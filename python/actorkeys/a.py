@@ -1,4 +1,4 @@
-KeysDictionary('mcs', (1, 3),
+KeysDictionary('a', (1, 3),
                Key("text", String(help="text for humans")),
                Key("version", String(help="EUPS/git version")),
                Key("cameraName", String()),
