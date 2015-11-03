@@ -1,6 +1,13 @@
-KeysDictionary("xcu", (2, 3),
+KeysDictionary("xcu", (2, 5),
                Key('Text', String(), help='Stuff for humans'),
                # All cooler keys:
+               Key("coolerLoop",
+                   Enum("ON","OFF","POWER",
+                        help="the state of the control loop"),
+                   Float(invalid="NaN", name='P'), 
+                   Float(invalid="NaN", name='I'), 
+                   Float(invalid="NaN", name='D')),
+                   
                Key("coolerTemps",
                    Float(invalid="NaN", units="K", name='setpoint'), 
                    Float(invalid="NaN", units="C", name='reject'), 
@@ -11,6 +18,8 @@ KeysDictionary("xcu", (2, 3),
                # All ion gauge keywords
                Key("pressure", Float(invalid="NaN", units="Torr"),
                    help="Ion gauge pressure. Comes via PCM UDP."),
+               Key("roughPressure1", Float(invalid="NaN", units="Torr"),
+                   help="Roughing station 1 gauge pressure."),
 
                # # All ion pump keywords:
                # # Need to add:
@@ -95,5 +104,19 @@ KeysDictionary("xcu", (2, 3),
                         name='position', help='reported position'),
                    Enum('Open', 'Closed', 'Blocked', 'Invalid',
                         name='controlState', help='enabled by xcu, allowed by interlock'),
-                   help='status of the gate valve')
+                   help='status of the gate valve'),
+
+               Key("turboSpeed",
+                   Int(units="rpm")),
+               Key("turboStatus",
+                   Uint(name="flags", repr="0x%08x"),
+                   String(name="description")),
+               Key("turboVAW",
+                   Float(invalid="NaN", units="V", name='voltage'), 
+                   Float(invalid="NaN", units="A", name='current'), 
+                   Float(invalid="NaN", units="W", name='power'), 
+                   help="Turbo pump draw. Use W, as A has useless resolution."),
+               Key('turboTemps',
+                   Float(invalid="NaN", units="degC", name='body temperature'), 
+                   Float(invalid="NaN", units="degC", name='controller temperature'), 
 )
