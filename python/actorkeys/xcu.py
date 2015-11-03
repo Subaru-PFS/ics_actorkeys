@@ -1,4 +1,4 @@
-KeysDictionary("xcu", (2, 2),
+KeysDictionary("xcu", (2, 3),
                Key('Text', String(), help='Stuff for humans'),
                # All cooler keys:
                Key("coolerTemps",
@@ -88,4 +88,12 @@ KeysDictionary("xcu", (2, 2),
                    Float(name='H1fraction', help='fractional power to heater 1. 0..1'),
                    Float(name='H2fraction', help='fractional power to heater 2, 0..1'),
                    help='status of the low power heaters.'),
+
+               Key("gatevalve",
+                   UInt(),
+                   Enum('Open', 'Closed', 'Unknown', 'Invalid',
+                        name='position', help='reported position'),
+                   Enum('Open', 'Closed', 'Blocked', 'Invalid',
+                        name='controlState', help='enabled by xcu, allowed by interlock'),
+                   help='status of the gate valve')
 )
