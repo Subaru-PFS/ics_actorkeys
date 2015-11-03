@@ -117,6 +117,6 @@ KeysDictionary("xcu", (2, 5),
                    Float(invalid="NaN", units="W", name='power'), 
                    help="Turbo pump draw. Use W, as A has useless resolution."),
                Key('turboTemps',
-                   Float(invalid="NaN", units="degC", name='body temperature'), 
-                   Float(invalid="NaN", units="degC", name='controller temperature')), 
+                   Float(invalid="NaN", units="degC", name='bodyTemp'), 
+                   Float(invalid="NaN", units="degC", name='controllerTemp')), 
 )
