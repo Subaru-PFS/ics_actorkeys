@@ -13,7 +13,7 @@ KeysDictionary('ccd', (1,1),
                    help="the number of rows read out and the image height."),
 
                Key("exposureState",
-                   Enum('idle','flushing','integrating','reading','aborted','unknown'),
+                   Enum('idle','wiping','integrating','reading','aborted','unknown'),
                    help="the state of the readout system"),
 
                Key("filepath",
