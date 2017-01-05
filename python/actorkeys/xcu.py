@@ -1,4 +1,4 @@
-KeysDictionary("xcu", (4, 0),
+KeysDictionary("xcu", (4, 1),
                Key('Text', String(), help='Stuff for humans'),
                # All cooler keys:
                Key("coolerLoop",
@@ -18,6 +18,8 @@ KeysDictionary("xcu", (4, 0),
                # All ion gauge keywords
                Key("pressure", Float(invalid="NaN", units="Torr"),
                    help="Ion gauge pressure. Comes via PCM UDP."),
+               Key("roughPressure1", Float(invalid="NaN", units="Torr"),
+                   help="Roughing station 1 gauge pressure."),
 
                # # All ion pump keywords:
                # # Need to add:
