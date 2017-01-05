@@ -1,4 +1,4 @@
-KeysDictionary("xcu", (2, 7),
+KeysDictionary("xcu", (4, 0),
                Key('Text', String(), help='Stuff for humans'),
                # All cooler keys:
                Key("coolerLoop",
