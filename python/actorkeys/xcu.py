@@ -18,8 +18,6 @@ KeysDictionary("xcu", (2, 6),
                # All ion gauge keywords
                Key("pressure", Float(invalid="NaN", units="Torr"),
                    help="Ion gauge pressure. Comes via PCM UDP."),
-               Key("roughPressure1", Float(invalid="NaN", units="Torr"),
-                   help="Roughing station 1 gauge pressure."),
 
                # # All ion pump keywords:
                # # Need to add:
