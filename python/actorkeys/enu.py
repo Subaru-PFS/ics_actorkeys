@@ -1,4 +1,4 @@
-KeysDictionary('enu', (1, 9),
+KeysDictionary('enu', (2, 0),
                Key("text", String(help="text for humans")),
                Key("version", String(help="EUPS/git version")),
                Key("exptime", Float(help='exposure time in seconds')),
