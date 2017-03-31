@@ -1,4 +1,4 @@
-KeysDictionary("aitroom", (1, 6),
+KeysDictionary("aitroom", (1, 7),
 
                Key("flowduino",
                    Float(invalid="NaN", units="C", name="temp"),
@@ -18,6 +18,8 @@ KeysDictionary("aitroom", (1, 6),
                    Float(invalid="Nan", units="C", name="temp3"),
                    Float(invalid="Nan", units="C", name="temp4"),
                    help="temperature from LAM clean room"),
-
-
+               Key("lauda",
+                   Float(invalid="NaN", units="C", name="setpoint"),
+                   Float(invalid="Nan", units="C", name="temp"),
+                   help="temperature setpoint, current temperature from LAUDA bath"),
 )
