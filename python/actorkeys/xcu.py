@@ -21,9 +21,9 @@ KeysDictionary("xcu", (5, 1),
                Key("roughPressure1", Float(invalid="NaN", units="Torr"),
                    help="Roughing station 1 gauge pressure."),
 
-               # # All ion pump keywords:
-               # # Need to add:
-               # #    The error bit masks and descriptions, current spat out as text
+               # All ion pump keywords:
+               # Need to add:
+               #    The error bit masks and descriptions, current spat out as text
                Key("ionpump1",
                    Bool('0', '1', name='enabled'),
                    Float(name='Voltage', invalid="NaN", units="V"),
