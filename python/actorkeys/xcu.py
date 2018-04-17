@@ -1,4 +1,4 @@
-KeysDictionary("xcu", (5, 1),
+KeysDictionary("xcu", (5, 2),
                Key('Text', String(), help='Stuff for humans'),
                # All cooler keys:
                Key("coolerLoop",
@@ -14,6 +14,13 @@ KeysDictionary("xcu", (5, 1),
                    Float(invalid="NaN", units="K", name='tip'), 
                    Float(invalid="NaN", units="W", name='power'), 
                    help="Cryocooler state. Setpoint, Reject, Tip."),
+
+               Key("coolerTemps2",
+                   Float(invalid="NaN", units="K", name='setpoint'), 
+                   Float(invalid="NaN", units="C", name='reject'), 
+                   Float(invalid="NaN", units="K", name='tip'), 
+                   Float(invalid="NaN", units="W", name='power'), 
+                   help="NIR shield cryocooler state. Setpoint, Reject, Tip."),
 
                # All ion gauge keywords
                Key("pressure", Float(invalid="NaN", units="Torr"),
@@ -125,6 +132,9 @@ KeysDictionary("xcu", (5, 1),
                         name='controlState', help='enabled by xcu, allowed by interlock'),
                    help='status of the gate valve'),
 
+               Key("sampower", Bool('0', '1', name='enabled'),
+                   help="status of the SAM power switch"),
+               
                Key("turboSpeed",
                    Int(units="rpm")),
                Key("turboStatus",
