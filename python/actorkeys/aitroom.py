@@ -33,7 +33,7 @@ KeysDictionary("aitroom", (1, 12),
                Key("lake1",
                    Float(invalid="NaN", units="C", name="temp1"),
                    help="temperature from lakeshore controller"),
-               Key("roughGauge", Float(invalid="NaN", units="Torr"),
+               Key("roughPressure", Float(invalid="NaN", units="Torr"),
                    help="Roughing station ait gauge pressure."),
 
 )
