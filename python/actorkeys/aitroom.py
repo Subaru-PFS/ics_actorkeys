@@ -1,4 +1,4 @@
-KeysDictionary("aitroom", (1, 12),
+KeysDictionary("aitroom", (1, 13),
 
                Key("flowduino",
                    Float(invalid="NaN", units="C", name="temp"),
@@ -35,5 +35,9 @@ KeysDictionary("aitroom", (1, 12),
                    help="temperature from lakeshore controller"),
                Key("roughPressure", Float(invalid="NaN", units="Torr"),
                    help="Roughing station ait gauge pressure."),
+               Key("lauda",
+                   Float(invalid="NaN", units="C", name="setpoint"),
+                   Float(invalid="Nan", units="C", name="temp"),
+                   help="temperature setpoint, current temperature from LAUDA bath"),
 
 )
