@@ -11,7 +11,7 @@ KeysDictionary('dcb', (1, 6),
                Key('pow_attenuator', Bool('off', 'on', name='state', help='power attenuator switch')),
                Key('pow_sphere', Bool('off', 'on', name='state', help='power int sphere switch')),
                Key('pow_halogen', Bool('off', 'on', name='state', help='power halogen switch')),
-               Key('pow_labsphere', Bool('off', 'on', 'undef', name='state', help='logical and of the 3 power supply')),
+               Key('pow_labsphere', Enum('off', 'on', 'undef', name='state', help='logical and of the 3 power supply')),
 
                Key('photodiode', Float(invalid='Nan', help='photo diode flux (foot-lambert)')),
                Key('fluxmedian', Float(invalid='Nan', help='photodiode flux median')),
