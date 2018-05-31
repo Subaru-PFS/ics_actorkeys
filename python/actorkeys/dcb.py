@@ -1,4 +1,4 @@
-KeysDictionary('dcb', (1, 5),
+KeysDictionary('dcb', (1, 6),
                Key("text", String(help="text for humans")),
                Key("version", String(help="EUPS/git version")),
                Key("neon", Bool("off", "on", name='state', help='neon lamp switch')),
@@ -11,6 +11,7 @@ KeysDictionary('dcb', (1, 5),
                Key("pow_attenuator", Bool("off", "on", name='state', help='power attenuator switch')),
                Key("pow_sphere", Bool("off", "on", name='state', help='power int sphere switch')),
                Key("pow_halogen", Bool("off", "on", name='state', help='power halogen switch')),
+               Key("pow_labsphere", Bool("off", "on", "undef", name='state', help='logical and of the 3 power supply')),
 
                Key("photodiode", Float(invalid="Nan", help='photo diode flux (foot-lambert)')),
                Key("fluxmedian", Float(invalid="Nan", help='photodiode flux median')),
