@@ -1,4 +1,4 @@
-KeysDictionary("xcu", (5, 2),
+KeysDictionary("xcu", (5, 3),
                Key('Text', String(), help='Stuff for humans'),
                # All cooler keys:
                Key("coolerLoop",
@@ -8,6 +8,33 @@ KeysDictionary("xcu", (5, 2),
                    Float(invalid="NaN", name='I'), 
                    Float(invalid="NaN", name='D')),
                    
+               Key("cooler2Loop",
+                   Enum("ON","OFF","POWER",
+                        help="the state of the control loop"),
+                   Float(invalid="NaN", name='P'), 
+                   Float(invalid="NaN", name='I'), 
+                   Float(invalid="NaN", name='D')),
+                   
+               Key("coolerStatus",
+                   Enum("ON","OFF","POWER",
+                        name="state",
+                        help="the state of the control loop"),
+                   UInt(name="errorMask", reprFmt="0x%02x"),
+                   String(name="errors", help="human-oriented error string"),
+                   Float(invalid="NaN", units="W", name='minPower'), 
+                   Float(invalid="NaN", units="W", name='maxPower'), 
+                   Float(invalid="NaN", units="W", name='power'))
+
+               Key("cooler2Status",
+                   Enum("ON","OFF","POWER",
+                        name="state",
+                        help="the state of the control loop"),
+                   UInt(name="errorMask", reprFmt="0x%02x"),
+                   String(name="errors", help="human-oriented error string"),
+                   Float(invalid="NaN", units="W", name='minPower'), 
+                   Float(invalid="NaN", units="W", name='maxPower'), 
+                   Float(invalid="NaN", units="W", name='power'))
+
                Key("coolerTemps",
                    Float(invalid="NaN", units="K", name='setpoint'), 
                    Float(invalid="NaN", units="C", name='reject'), 
@@ -15,7 +42,7 @@ KeysDictionary("xcu", (5, 2),
                    Float(invalid="NaN", units="W", name='power'), 
                    help="Cryocooler state. Setpoint, Reject, Tip."),
 
-               Key("coolerTemps2",
+               Key("cooler2Temps",
                    Float(invalid="NaN", units="K", name='setpoint'), 
                    Float(invalid="NaN", units="C", name='reject'), 
                    Float(invalid="NaN", units="K", name='tip'), 
