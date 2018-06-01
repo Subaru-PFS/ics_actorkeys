@@ -73,7 +73,14 @@ KeysDictionary("xcu", (5, 3),
                    Float(name='Pressure', invalid="NaN", units="Torr"),
                    help="Ion pump status. Pump #2 for this dewar"),
 
-               # PCM keywords
+               Key("ionpump1Errors",
+                   UInt(name="errorMask", reprFmt="0x%02x"),
+                   Enum("OK", "ERROR", name="errorState")),
+               Key("ionpump2Errors",
+                   UInt(name="errorMask", reprFmt="0x%02x"),
+                   Enum("OK", "ERROR", name="errorState")),
+
+                   # PCM keywords
                Key("powerNames", String()*8,
                    help="names of the PCM power port devices."),
                Key("powerMask", Int(),
