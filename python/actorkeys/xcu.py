@@ -23,7 +23,7 @@ KeysDictionary("xcu", (5, 3),
                    String(name="errors", help="human-oriented error string"),
                    Float(invalid="NaN", units="W", name='minPower'), 
                    Float(invalid="NaN", units="W", name='maxPower'), 
-                   Float(invalid="NaN", units="W", name='power'))
+                   Float(invalid="NaN", units="W", name='power')),
 
                Key("cooler2Status",
                    Enum("ON","OFF","POWER",
@@ -33,7 +33,7 @@ KeysDictionary("xcu", (5, 3),
                    String(name="errors", help="human-oriented error string"),
                    Float(invalid="NaN", units="W", name='minPower'), 
                    Float(invalid="NaN", units="W", name='maxPower'), 
-                   Float(invalid="NaN", units="W", name='power'))
+                   Float(invalid="NaN", units="W", name='power')),
 
                Key("coolerTemps",
                    Float(invalid="NaN", units="K", name='setpoint'), 
