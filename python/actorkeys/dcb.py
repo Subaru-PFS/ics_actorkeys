@@ -15,7 +15,7 @@ KeysDictionary('dcb', (1, 6),
 
                Key('photodiode', Float(invalid='Nan', help='photo diode flux (foot-lambert)')),
                Key('fluxmedian', Float(invalid='Nan', help='photodiode flux median')),
-               Key('attenuator', UInt(help='attenuator opening value (open=0)')),
+               Key('attenuator', Int(help='attenuator opening value (open=0)')),
                Key('halogen', Bool('off', 'on', name='state', help='halogen switch')),
                Key('atenVAW',
                    Float(name='voltage', help='Voltage'),

@@ -1,4 +1,4 @@
-KeysDictionary('sac', (1, 2),
+KeysDictionary('sac', (1, 3),
                Key("text", String(help="text for humans")),
                Key("lsPenta",
                    Enum('LOADED', 'ONLINE', name='state'),
@@ -13,5 +13,6 @@ KeysDictionary('sac', (1, 2),
                     String(name="nightDirectory"),
                     String(name="filename"),
                     help="all the parts making up the image file path. Suitable for os.path.join()"),
+               Key("newVisits", Int() * (1,),help='new visits'),
 
                )
