@@ -1,4 +1,4 @@
-KeysDictionary('sac', (1, 4),
+KeysDictionary('sac', (1, 5),
                Key("text", String(help="text for humans")),
                Key('metaFSM',
                    Enum('OFF', 'LOADED', 'ONLINE', name='state'),
@@ -21,5 +21,7 @@ KeysDictionary('sac', (1, 4),
                    String(name="filename"),
                    help="all the parts making up the image file path. Suitable for os.path.join()"),
                Key("newVisits", Int() * (1,), help='new visits'),
+               Key("looptime",
+                   Float(), help='ccd exposure loop'),
 
                )
