@@ -1,4 +1,4 @@
-KeysDictionary('dcb', (1, 6),
+KeysDictionary('dcb', (1, 7),
                Key('text', String(help='text for humans')),
                Key('version', String(help='EUPS/git version')),
                Key('neon', Bool('off', 'on', name='state', help='neon lamp switch')),
@@ -8,6 +8,9 @@ KeysDictionary('dcb', (1, 6),
                Key('deuterium', Bool('off', 'on', name='state', help='deuterium lamp switch')),
                Key('bakeout', Bool('off', 'on', name='state', help='bakeout cover')),
                Key('roughpump', Bool('off', 'on', name='state', help='roughpump')),
+               Key('sac', Bool('off', 'on', name='state', help='sac')),
+               Key('breva', Bool('off', 'on', name='state', help='breva')),
+
                Key('pow_attenuator', Bool('off', 'on', name='state', help='power attenuator switch')),
                Key('pow_sphere', Bool('off', 'on', name='state', help='power int sphere switch')),
                Key('pow_halogen', Bool('off', 'on', name='state', help='power halogen switch')),
@@ -25,5 +28,17 @@ KeysDictionary('dcb', (1, 6),
                    Enum('OFF', 'LOADED', 'ONLINE', name='state'),
                    Enum('IDLE', 'LOADING', 'INITIALISING','MOVING', 'WARMING', 'FAILED', name='substate'),
                    help='meta state machine'),
-               )
+               Key('labsphereFSM',
+                   Enum('OFF', 'LOADED', 'ONLINE', name='state'),
+                   Enum('IDLE', 'LOADING', 'INITIALISING', 'MOVING', 'WARMING', 'FAILED', name='substate'),
+                                      help = 'labsphere state machine'),
+               Key('labsphereMode', Enum('operation', 'simulation', help = 'labsphere mode')),
+               Key('atenFSM',
+                   Enum('OFF', 'LOADED', 'ONLINE', name='state'),
+                   Enum('IDLE', 'LOADING', 'INITIALISING', 'FAILED', name='substate'),
+                   help = 'aten state machine'),
+               Key('atenMode', Enum('operation', 'simulation', help = 'aten mode'))
+
+
+)
 
