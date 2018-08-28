@@ -61,7 +61,7 @@ KeysDictionary('enu', (2, 4),
                    Float(name='period', help='bia illumination period'),
                    Float(name='duty', help='duty cycle')),
                Key('biaStrobe',
-                   Enum('off', 'on', name='state', help='strobe mode')),
+                   Bool('off', 'on', name='state', help='strobe mode')),
 
                Key('rexmFSM',
                    Enum('OFF', 'LOADED', 'ONLINE', name='state'),
