@@ -1,4 +1,4 @@
-KeysDictionary('enu', (2, 5),
+KeysDictionary('enu', (2, 6),
                Key('text', String(help='text for humans')),
                Key('version', String(help='EUPS/git version')),
                Key('metaFSM',
