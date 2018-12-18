@@ -222,7 +222,8 @@ KeysDictionary("xcu", (6, 1),
 
 
                Key("turboSpeed",
-                   Int(units="rpm")),
+                   Int(units="rpm", help='turbo pump speed',
+                       FITS=('W_XTBOSP', 'XCU_TURBO_SPEED'))),
                Key("turboStatus",
                    UInt(name="flags", reprFmt="0x%08x"),
                    String(name="description")),
