@@ -1,5 +1,12 @@
-KeysDictionary("xcu", (7, 0),
+KeysDictionary("xcu", (7, 1),
                Key('Text', String(), help='Stuff for humans'),
+               Key('version', String(help="XCU actor version",
+                                     FITS=("W_RVXCU",
+                                           "W_XCUACTOR_VERSION"))),
+               Key('version_tron_actorcore', String()),
+               Key('version_pfs_utils', String()),
+               Key('version_ics_xcu_rtdadio', String()),
+
                # All cooler keys:
                Key("coolerLoop",
                    Enum("ON","OFF","POWER",
