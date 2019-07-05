@@ -279,7 +279,7 @@ KeysDictionary("xcu", (7, 1),
                           FITS=('W_XM3POS', 'XCU_CCDARM3_POSITION')),
                     help="Motor 3: 8:00 facing visible dewar"),
 
-               Key("interlockStatus",
+               Key("interlock",
                    UInt(name="flags", reprFmt="0x%02x"),
                    String(name="description")),
                Key("interlockPressures",
