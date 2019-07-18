@@ -1,4 +1,5 @@
-KeysDictionary("xcu", (8, 1),
+KeysDictionary("xcu", (8, 2),
+               Key("controllers", String(help='controllers list') * (1, None)),
                Key('Text', String(), help='Stuff for humans'),
                Key('version', String(help="XCU actor version",
                                      FITS=("W_RVXCU",
