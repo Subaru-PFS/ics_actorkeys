@@ -1,0 +1,12 @@
+KeysDictionary('fps', (1, 1),
+               Key("text", String(help="text for humans")),
+               Key('version', String(help="FPS actor version",
+                                     FITS=("W_RVFPS",
+                                           "W_FPSACTOR_VERSION"))),
+               Key('version_tron_actorcore', String()),
+               Key('version_pfs_utils', String()),
+               Key('pfsDesignId', Long(help="the loaded pfsDesignId",
+                                       FITS=('W_PFDSGN', 'W_PFS_DESIGN_ID'))),
+               Key('pfsConfigId', Long(help="the PFI configuration",
+                                       FITS=('W_PFCONF', 'W_PFS_CONFIG_ID'))),
+)
