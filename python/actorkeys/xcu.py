@@ -1,4 +1,4 @@
-KeysDictionary("xcu", (8, 1),
+KeysDictionary("xcu", (8, 2),
                Key('Text', String(), help='Stuff for humans'),
                Key('version', String(help="XCU actor version",
                                      FITS=("W_RVXCU",
@@ -7,7 +7,12 @@ KeysDictionary("xcu", (8, 1),
                Key('version_pfs_utils', String()),
                Key('version_ics_xcu_rtdadio', String()),
 
-               # All cooler keys:
+               # State of cooling/pumping systems.
+               Key("coolerLoop",
+                   Enum("unknown","idle","pumpdown","cooldown","warmup",
+                        help="the state of the pumping/cooling system"),
+
+                # All cooler keys:
                Key("coolerLoop",
                    Enum("ON","OFF","POWER",
                         FITS=('W_XCOOL1', 'XCU_COOLER1_STATE'),
