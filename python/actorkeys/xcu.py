@@ -1,4 +1,4 @@
-KeysDictionary("xcu", (8, 3),
+KeysDictionary("xcu", (10, 1),
                Key("controllers", String(help='controllers list') * (1, None)),
                Key('Text', String(), help='Stuff for humans'),
                Key('version', String(help="XCU actor version",
@@ -110,11 +110,13 @@ KeysDictionary("xcu", (8, 3),
                    help="Ion pump status. Pump #2 for this dewar"),
 
                Key("ionpump1Errors",
-                   UInt(name="errorMask", reprFmt="0x%02x"),
-                   Enum("OK", "ERROR", name="errorState")),
+                   UInt(name="errorMask", reprFmt="0x%05x"),
+                   Enum("OK", "ERROR", name="errorState"),
+                   String(name="errorString")),
                Key("ionpump2Errors",
-                   UInt(name="errorMask", reprFmt="0x%02x"),
-                   Enum("OK", "ERROR", name="errorState")),
+                   UInt(name="errorMask", reprFmt="0x%05x"),
+                   Enum("OK", "ERROR", name="errorState"),
+                   String(name="errorString")), 
 
                # PCM keywords
                Key("powerNames", String()*8,
