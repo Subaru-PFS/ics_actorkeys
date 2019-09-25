@@ -11,7 +11,7 @@ KeysDictionary("xcu", (10, 1),
                # State of cooling/pumping systems.
                Key("cryoMode",
                    Enum("unknown","idle","pumpdown","cooldown","warmup",
-                        help="the state of the pumping/cooling system"),
+                        help="the state of the pumping/cooling system")),
 
                 # All cooler keys:
                Key("coolerLoop",
