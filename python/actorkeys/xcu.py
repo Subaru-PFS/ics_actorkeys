@@ -1,4 +1,4 @@
-KeysDictionary("xcu", (8, 3),
+KeysDictionary("xcu", (8, 4),
                Key("controllers", String(help='controllers list') * (1, None)),
                Key('Text', String(), help='Stuff for humans'),
                Key('version', String(help="XCU actor version",
@@ -10,8 +10,8 @@ KeysDictionary("xcu", (8, 3),
 
                # State of cooling/pumping systems.
                Key("cryoMode",
-                   Enum("unknown","idle","pumpdown","cooldown","warmup",
-                        help="the state of the pumping/cooling system"),
+                   Enum("unknown",'offline', 'standby', 'pumpdown', 'cooldown', 'operation', 'warmup', 'bakeout',
+                        help="the state of the pumping/cooling system")),
 
                 # All cooler keys:
                Key("coolerLoop",
@@ -111,10 +111,12 @@ KeysDictionary("xcu", (8, 3),
 
                Key("ionpump1Errors",
                    UInt(name="errorMask", reprFmt="0x%02x"),
-                   Enum("OK", "ERROR", name="errorState")),
+                   Enum("OK", "ERROR", name="errorState"),
+                   String(name="errors", help="human-oriented error string")),
                Key("ionpump2Errors",
                    UInt(name="errorMask", reprFmt="0x%02x"),
-                   Enum("OK", "ERROR", name="errorState")),
+                   Enum("OK", "ERROR", name="errorState"),
+                   String(name="errors", help="human-oriented error string")),
 
                # PCM keywords
                Key("powerNames", String()*8,
