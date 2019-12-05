@@ -1,4 +1,4 @@
-KeysDictionary('enu', (3, 6),
+KeysDictionary('enu', (3, 7),
                Key("controllers", String(help='controllers list') * (1, None)),
                Key('text', String(help='text for humans')),
                Key('version', String(help="ENU actor version",FITS=("W_RVENU", "W_ENUACTOR_VERSION"))),
@@ -272,5 +272,8 @@ KeysDictionary('enu', (3, 6),
                Key('hgar',
                    Bool('off', 'on', name='state', help='Internal Illumination Sources mercury-argon lamp state',
                         FITS=('W_ENIISH', 'ENU_IIS_HGAR'))),
+               Key('neon',
+                   Bool('off', 'on', name='state', help='Internal Illumination Sources neon lamp state',
+                        FITS=('W_ENIISN', 'ENU_IIS_NEON'))),
 
                )
