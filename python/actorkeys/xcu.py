@@ -81,9 +81,9 @@ KeysDictionary("xcu", (8, 4),
                    help="NIR shield cryocooler state. Setpoint, Reject, Tip."),
 
                # All ion gauge keywords
-               Key("pressure", Float(invalid="NaN", units="Torr"),
-                   help="Ion gauge pressure",
-                   FITS=('W_XPRESS', 'XCU_PRESSURE')),
+               Key("pressure", Float(invalid="NaN", units="Torr",
+                                     help="Ion gauge pressure",
+                                     FITS=('W_XPRESS', 'XCU_PRESSURE'))),
 
                # All ion pump keywords:
                # Need to add:
