@@ -1,12 +1,12 @@
-KeysDictionary('rough', (2, 0),
+KeysDictionary('rough', (2, 1),
                Key("text",
                    String(help="text for humans")),
                Key("version",
                    String(help="EUPS/git version")),
 
                Key('pumpSpeed',
-                   Float(help='roughing pump speed',
-                         units='rpm')),
+                   Float(units='rpm'),
+                   STS=0, help='roughing pump speed'),
                Key('pumpTemps',
                    Float(help='roughing pump temperature',
                          units='degC'),
@@ -35,6 +35,6 @@ KeysDictionary('rough', (2, 0),
                    Int(help='roughing pump bearing life', units='hour')),
 
                Key('pressure',
-                   Float(help='roughing line pressure',
-                         units='Torr')),
-)
+                   Float(units='Torr',
+                         STS=1, help='roughing line pressure')),
+               )
