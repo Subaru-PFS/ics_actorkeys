@@ -2,7 +2,8 @@ KeysDictionary(
     'scr',
     (1, 6),
     Key('text', String(), help='Human oriented message string'),
-    Key('version', String(), help='Actor version string'),
+    Key('version', String(help='SCR Actor version',
+                          FITS=('W_RVSCR', 'W_SCRACTOR_VERSION'))),
     Key('spsCooler',
         Float(name='facFlow', units='LPM', help='Facility coolant flow rate'),
         Float(name='facTemp', units='C', help='Facility coolant temperature'),
@@ -15,7 +16,7 @@ KeysDictionary(
         Float(name='facTemp', units='C', help='Facility coolant temperature'),
         Float(name='supFlow', units='LPM', help='Supply coolant flow rate'),
         Float(name='supTemp', units='C', help='Supply coolant temperature'),
-        help='Coolant state at the Lytron cooler for the clearn room heat exchangers'
+        help='Coolant state at the Lytron cooler for the clean room heat exchangers'
     ),
     Key('spsChiller',
         Float(name='supTemp', units='C', help='Supply coolant temperature'),
@@ -29,7 +30,7 @@ KeysDictionary(
         Float(name='supFlow', units='LPM', help='Supply coolant flow rate'),
         Float(name='supPress', units='MPa', help='Supply coolant pressure'),
         Enum('off', 'on', 'warning', 'fault', 'unknown', name='state', help='Operational state'),
-        help='State of the SMC thermo chiller for the clearn room heat exchangers'
+        help='State of the SMC thermo chiller for the clean room heat exchangers'
     ),
     Key('spsManifold',
         Float(name='inPress', units='MPa', help='Intake coolant pressure'),
@@ -50,7 +51,8 @@ KeysDictionary(
     ),
     Key('scrHumidity',
         Float(name='dewPoint', units='C', help='Dew point inside clean room'),
-        Float(name='relHum', units='%', help='Relative humidity inside clean room'),
+        Float(name='relHum', units='%', help='Relative humidity inside clean room',
+              FITS=('W_CRRHUM', 'W_SCR_RELATIVE_HUMIDITY')),
         help='Dew point and relative humidity inside the clean room'
     ),
     Key('scrTemps',
@@ -76,8 +78,10 @@ KeysDictionary(
         help='Air temperatures inside and outside the clean room'
     ),
     Key('scrLoop',
-        Float(name='airTemp', units='C', help='Air temperature'),
-        Float(name='setTemp', units='C', help='Setpoint temperature'),
+        Float(name='airTemp', units='C', help='Clean room air temperature',
+              FITS=('W_CRTEMP', 'W_SCR_CONTROL_TEMP')),              
+        Float(name='setTemp', units='C', help='Clean room setpoint temperature',
+              FITS=('W_CRSETP', 'W_SCR_CONTROL_SETPOINT')),
         Enum('unknown', 'off', 'on', name='state', help='Operational state'),
         help='State of the air temperature controller'
     ),
