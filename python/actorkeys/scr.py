@@ -85,4 +85,7 @@ KeysDictionary(
         Enum('unknown', 'off', 'on', name='state', help='Operational state'),
         help='State of the air temperature controller'
     ),
+    Key('scrLights',
+        Enum('unknown', 'off', 'on', name='state', help='State of ceiling lights'),
+    ),
 )
