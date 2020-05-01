@@ -1,9 +1,10 @@
-KeysDictionary('sps', (1, 2),
+KeysDictionary('sps', (1, 3),
                Key('text', String(help='text for humans')),
                Key('version', String(help='SPS actor version')),
                Key('version_tron_actorcore', String()),
                Key('version_pfs_utils', String()),
                Key('version_ics_actorkeys', String()),
                Key('visit', Int(help='assigned PFS visit')),
-               Key('exposable', String(help='camera list to expose') * (1, None)),
+               Key('exposable', String(help='camList that can be safely exposed') * (1, None)),
+               Key('frames', String(help='camList for frames that has genuinely been created') * (1, None)),
                )
