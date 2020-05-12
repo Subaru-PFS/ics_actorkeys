@@ -1,6 +1,7 @@
 KeysDictionary('sps', (1, 3),
                Key('text', String(help='text for humans')),
-               Key('version', String(help='SPS actor version')),
+               Key('version', String(help='SPS actor version',
+                                     FITS=('W_RVSPS', 'W_SPSACTOR_VERSION'))),
                Key('version_tron_actorcore', String()),
                Key('version_pfs_utils', String()),
                Key('version_ics_actorkeys', String()),
