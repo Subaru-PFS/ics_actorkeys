@@ -4,7 +4,7 @@
 KeysDictionary('gen2', (3, 0),
                Key("text", String(help="text for humans")),
                Key("version", String(help="Gen2 actor version",
-                                     FITS=('W_RVG2AC',
+                                     FITS=('W_RVGEN2',
                                            'W_GEN2ACTOR_VERSION'))),
                Key("version_gen2", String(help="Gen2 library version",
                                           FITS=('W_RVG2LB',
@@ -87,6 +87,7 @@ KeysDictionary('gen2', (3, 0),
                          FITS=("LONPOLE", "")),
                    Float("equinox", units='year', help="Standard FK5",
                          FITS=("EQUINOX", ""))),
+
                
                Key("program",
                    String("proposal", help="Proposal ID",
