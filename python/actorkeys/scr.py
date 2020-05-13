@@ -82,10 +82,12 @@ KeysDictionary(
               FITS=('W_CRTEMP', 'W_SCR_CONTROL_TEMP')),              
         Float(name='setTemp', units='C', help='Clean room setpoint temperature',
               FITS=('W_CRSETP', 'W_SCR_CONTROL_SETPOINT')),
-        Enum('unknown', 'off', 'on', name='state', help='Operational state'),
+        Enum('unknown', 'off', 'on', name='state', help='Clean room operational state',
+              FITS=('W_CRLOOP', 'W_SCR_CONTROL_LOOP_STATE')),
         help='State of the air temperature controller'
     ),
     Key('scrLights',
-        Enum('unknown', 'off', 'on', name='state', help='State of ceiling lights'),
+        Enum('unknown', 'off', 'on', name='state', help='State of ceiling lights',
+             FITS=('W_CRLGHT', 'W_SCR_ROOMLIGHTS')),
     ),
 )
