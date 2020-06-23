@@ -1,7 +1,7 @@
 # from opscore.protocols.keys import KeysDictionary
 # from opscore.protocols.types import Key, String, Float, Int
 
-KeysDictionary('gen2', (4, 0),
+KeysDictionary('gen2', (4, 1),
                Key("text", String(help="text for humans")),
                Key("version", String(help="Gen2 actor version",
                                      FITS=('W_RVGEN2',
@@ -174,10 +174,8 @@ KeysDictionary('gen2', (4, 0),
                          units='mm')),
                
                Key("frame_ids",
-                   String(name="imageId", help="Image ID",
-                          FITS=("FRAMEID", "")),
-                   String(name="expId", help="Exposure/visit ID",
-                          FITS=("EXP-ID", ""))),
+                   String(name="imageId", help="Image ID"),
+                   String(name="expId", help="Exposure/visit ID")),
 
                Key("autoguider",
                    String(name="state",
