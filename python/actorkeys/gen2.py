@@ -1,7 +1,7 @@
 # from opscore.protocols.keys import KeysDictionary
 # from opscore.protocols.types import Key, String, Float, Int
 
-KeysDictionary('gen2', (4, 1),
+KeysDictionary('gen2', (4, 2),
                Key("text", String(help="text for humans")),
                Key("version", String(help="Gen2 actor version",
                                      FITS=('W_RVGEN2',
@@ -102,10 +102,10 @@ KeysDictionary('gen2', (4, 1),
                    String(name="platform", help="Focus where instrument is attached.",
                           FITS=("FOC-POS", "")),
                    Float(name='val', units='um', help="Focus encoder value",
-                         FITS=('FOC_VAL', ''))),
+                         FITS=('FOC-VAL', ''))),
                Key("tel_adc",
                    String(name='name', help="ADC name",
-                          FITS=('ADC-TYP', '')),
+                          FITS=('ADC-TYPE', '')),
                    Float(name='angle', units='deg', help="ADC pos angle",
                          FITS=('ADC-STR', ''))),
 
@@ -130,7 +130,6 @@ KeysDictionary('gen2', (4, 1),
                
                Key("m2",
                    String(name="type",
-                          FITS=("M2-TYPE", ""),
                           help="M2 type"),
                    Float(name="xpos",
                          FITS=("M2-POS1", ""),
