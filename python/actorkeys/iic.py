@@ -1,4 +1,4 @@
-KeysDictionary('iic', (1,0),
+KeysDictionary('iic', (1,2),
                Key("controllers", String(help='controllers list') * (1, None)),
                Key("text", String(), help='Stuff for humans'),
                Key('version', String(help="IIC actor version",
