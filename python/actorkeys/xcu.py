@@ -1,4 +1,4 @@
-KeysDictionary("xcu", (10, 5),
+KeysDictionary("xcu", (10, 6),
                Key("controllers", String(help='controllers list') * (1, None)),
                Key('Text', String(), help='Stuff for humans'),
                Key('version', String(help="XCU actor version",
@@ -265,7 +265,10 @@ KeysDictionary("xcu", (10, 5),
                         FITS=('W_XGATRQ', 'XCU_GATEVALVE_REQUESTED_POS'),
                         help='gatevalve request status'),
                    help='status of the gate valve'),
-
+               Key("gvMask",
+                   UInt(name="mask", reprFmt="0x%02x",
+                        help="raw mask from the ADIO interface.")),
+                   
                Key("sampower", Bool('0', '1', name='enabled'),
                    FITS=('W_XSAMPW', 'XCU_SAM_POWER'),
                    help='SAM power state'),
