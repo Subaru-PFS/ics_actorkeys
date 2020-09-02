@@ -28,7 +28,7 @@ KeysDictionary('ccd', (2,4),
                          FITS=('W_CCD1T', 'CCD1_TEMP')), 
                    help='detector assembly temperatures'),
 
-               Key('beamConfigDate'
+               Key('beamConfigDate',
                    Int(name='visit', help='this visit'),
                    Float(name='mjd', help='the date of the last move affecting the beam')),
                
