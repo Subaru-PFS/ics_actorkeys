@@ -1,4 +1,4 @@
-KeysDictionary('ccd', (2,3),
+KeysDictionary('ccd', (2,4),
                Key("controllers", String(help='controllers list') * (1, None)),
                Key("Text", String(), help='Stuff for humans'),
                Key('version', String(help="CCD actor version",
@@ -28,6 +28,10 @@ KeysDictionary('ccd', (2,3),
                          FITS=('W_CCD1T', 'CCD1_TEMP')), 
                    help='detector assembly temperatures'),
 
+               Key('beamConfigDate',
+                   Int(name='visit', help='this visit'),
+                   Float(name='mjd', help='the date of the last move affecting the beam')),
+               
                Key("readRows",
                    Int(name='rowsDone'),
                    Int(name='rowsTotal'),
