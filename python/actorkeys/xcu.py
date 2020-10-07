@@ -85,7 +85,7 @@ KeysDictionary("xcu", (10, 7),
                Key("pressure",
                    Float(invalid="NaN", units="Torr",
                          FITS=('W_XPRESS', 'XCU_PRESSURE'),
-                         STS=3,  help="Ion gauge pressure")),
+                         STS=3,  help="Cryostat gauge pressure")),
 
                # All ion pump keywords:
                # Need to add:
