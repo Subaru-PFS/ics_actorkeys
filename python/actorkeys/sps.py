@@ -1,4 +1,4 @@
-KeysDictionary('sps', (1, 4),
+KeysDictionary('sps', (1, 5),
                Key('text', String(help='text for humans')),
                Key('version', String(help='SPS actor version',
                                      FITS=('W_RVSPS', 'W_SPSACTOR_VERSION'))),
@@ -10,5 +10,11 @@ KeysDictionary('sps', (1, 4),
                    Int(help='assigned PFS visit'), String('camera list'), UInt(name="camMask", reprFmt="0x%04x")),
                Key('visit', Int(help='assigned PFS visit')),
                Key('frames', String(help='camList for frames that has genuinely been created') * (1, None)),
+
+               Key("spsConfig", String(help='spectrograph modules list') * (1, None)),
+               Key("sm1Parts", String(help='spectrograph module 1 parts list') * (1, None)),
+               Key("sm2Parts", String(help='spectrograph module 2 parts list') * (1, None)),
+               Key("sm3Parts", String(help='spectrograph module 3 parts list') * (1, None)),
+               Key("sm4Parts", String(help='spectrograph module 4 parts list') * (1, None)),
 
                )
