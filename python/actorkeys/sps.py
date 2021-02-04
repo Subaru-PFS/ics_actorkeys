@@ -1,4 +1,4 @@
-KeysDictionary('sps', (1, 5),
+KeysDictionary('sps', (1, 6),
                Key('text', String(help='text for humans')),
                Key('version', String(help='SPS actor version',
                                      FITS=('W_RVSPS', 'W_SPSACTOR_VERSION'))),
@@ -17,4 +17,8 @@ KeysDictionary('sps', (1, 5),
                Key("sm3Parts", String(help='spectrograph module 3 parts list') * (1, None)),
                Key("sm4Parts", String(help='spectrograph module 4 parts list') * (1, None)),
 
+               Key("sm1LightSource", String(help='spectrograph module 1 light source')),
+               Key("sm2LightSource", String(help='spectrograph module 2 light source')),
+               Key("sm3LightSource", String(help='spectrograph module 3 light source')),
+               Key("sm4LightSource", String(help='spectrograph module 4 light source')),
                )
