@@ -1,7 +1,7 @@
 # from opscore.protocols.keys import KeysDictionary
 # from opscore.protocols.types import Key, String, Float, Int
 
-KeysDictionary('gen2', (4, 2),
+KeysDictionary('gen2', (4, 3),
                Key("text", String(help="text for humans")),
                Key("version", String(help="Gen2 actor version",
                                      FITS=('W_RVGEN2',
@@ -59,6 +59,26 @@ KeysDictionary('gen2', (4, 2),
                           FITS=("DEC2000", ""),
                           help="DEC of telescope pointing",
                           units='DMS')),
+
+               Key("pointing",
+                   String(name="ra",
+                          FITS=("RA_CMD", ""),
+                          help="RA of nominal telescope pointing",
+                          units='HMS'),
+                   String(name="dec",
+                          FITS=("DEC_CMD", ""),
+                          help="DEC of nominal telescope pointing",
+                          units='DMS')),
+
+               Key("offsets",
+                   Float(name="ra",
+                         FITS=("W_RAOFF", ""),
+                         help="RA offset",
+                         units='arcsec'),
+                   Float(name="dec",
+                         FITS=("W_DECOFF", ""),
+                         help="Dec offset",
+                         units='arcsec')),
 
                Key("conditions",
                    String(name="weather",
