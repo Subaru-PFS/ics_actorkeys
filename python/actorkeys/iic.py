@@ -14,7 +14,7 @@ KeysDictionary('iic', (1,3),
                    String(name='cmdStr'),
                    String(name='name'),
                    String(name='comments'),
-                   Bool('False', 'True', name='isDone'),
+                   Enum('active', 'failed', 'finished', 'aborted', name='status'),
                    help='sps_sequence'),
 
                Key("subCommand",
