@@ -103,6 +103,10 @@ KeysDictionary('dcb', (3, 8),
                    Float(name='channel2', help='calibrated channel 2 adc value')),
 
                ### PURE LAM KEYWORDS STARTING FROM HERE ###
+               Key('xenon',
+                   Bool('off', 'on', name='state', help='xenon lamp switch', FITS=('W_AITXEN', 'AIT_DCB_XENON')),
+                   Int(name='elapsedTime', help='number of seconds since lamp is on')),
+               
                Key('pduFSM',
                    Enum('none', 'OFF', 'LOADED', 'ONLINE', name='state'),
                    Enum('none', 'IDLE', 'LOADING', 'INITIALISING', 'SWITCHING', 'FAILED', name='substate'),
