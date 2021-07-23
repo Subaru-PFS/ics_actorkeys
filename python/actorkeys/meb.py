@@ -1,4 +1,4 @@
-KeysDictionary('meb', (1, 9),
+KeysDictionary('meb', (2, 0),
                Key("text", String(help="text for humans")),
                Key("version", String(help="EUPS/git version")),
                Key('temps',
