@@ -1,6 +1,7 @@
-KeysDictionary('peb', (1, 3),
+KeysDictionary('peb', (1, 4),
                Key("text", String(help="text for humans")),
                Key("version", String(help="EUPS/git version")),
+               Key("controllers", String(help='controllers list') * (1, None)),
                Key('temps',
                       Float(name='AGC_4', units='degC'),
                       Float(name='AGC_3', units='degC'),
