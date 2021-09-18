@@ -1,4 +1,4 @@
-KeysDictionary('iic', (1,4),
+KeysDictionary('iic', (1, 5),
                Key("controllers", String(help='controllers list') * (1, None)),
                Key("text", String(), help='Stuff for humans'),
                Key('version', String(help="IIC actor version",
@@ -24,4 +24,6 @@ KeysDictionary('iic', (1,4),
                    Bool('0', '1', name='didFail'),
                    String(name='lastReply'),
                    help='subCommand from sps_sequence'),
-)
+               Key("designId",
+                   Long(name="mask", reprFmt="0x%016x")),
+               )
