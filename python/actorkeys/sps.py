@@ -1,4 +1,4 @@
-KeysDictionary('sps', (1, 7),
+KeysDictionary('sps', (1, 8),
                Key('text', String(help='text for humans')),
                Key('version', String(help='SPS actor version',
                                      FITS=('W_RVSPS', 'W_SPSACTOR_VERSION'))),
@@ -22,4 +22,17 @@ KeysDictionary('sps', (1, 7),
                Key("sm2LightSource", String(help='spectrograph module 2 light source')),
                Key("sm3LightSource", String(help='spectrograph module 3 light source')),
                Key("sm4LightSource", String(help='spectrograph module 4 light source')),
+
+               Key('biaStatus',
+                   Int(name='power', units='percent', invalid=-1, help='bia power(%)',
+                       FITS=('W_BIAPOW', 'W_SPS_BIA_POWER')),
+                   Int(name='period', units='ms', invalid=-1, help='bia strobe period',
+                       FITS=('W_BIAPER', 'W_SPS_BIA_STROBE_PERIOD')),
+                   Int(name='strobeDuty', units='percent', invalid=-1, help='bia strobe duty cycle',
+                       FITS=('W_BIADTY', 'W_SPS_BIA_STROBE_DUTY')),
+                   Int(name='pulseOn', units='ms', invalid=-1, help='bia pulse high duration',
+                       FITS=('W_BIAON', 'W_SPS_BIA_PULSE_ON')),
+                   Int(name='pulseOff', units='ms', invalid=-1, help='bia pulse low duration',
+                       FITS=('W_BIAOFF', 'W_SPS_BIA_PULSE_OFF')))
+
                )
