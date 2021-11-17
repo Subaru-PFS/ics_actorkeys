@@ -1,4 +1,4 @@
-KeysDictionary("hx", (1, 0),
+KeysDictionary("hx", (1, 1),
                Key("controllers", String(help='controllers list') * (1, 2)),
                Key("text", String(), help='Stuff for humans'),
                Key('version', String(help="HX actor version",
@@ -66,8 +66,14 @@ KeysDictionary("hx", (1, 0),
                    String(name="filename"),
                    help="all the parts making up the image file path. Suitable for os.path.join()"),
 
+               Key("spsFileIds",
+                   String(name="cam", help="the camera name (e.g. b3)"),
+                   String(name="pfsDay", help="the date used for the night data (e.g. 2020-05-14)"),
+                   Int(name="visit", help="the PFS visit"),
+                   Int(name="spectrograph", help="the spectrograph module number"),
+                   Int(name="arm", help="the arm number")),
+
                Key("exposureState",
                    Enum('idle','resetting','reading','aborted','unknown'),
                    help="the state of the readout system"),
-
 )
