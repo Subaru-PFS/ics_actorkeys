@@ -1,7 +1,7 @@
 # from opscore.protocols.keys import KeysDictionary
 # from opscore.protocols.types import Key, String, Float, Int
 
-KeysDictionary('gen2', (4, 3),
+KeysDictionary('gen2', (4, 4),
                Key("text", String(help="text for humans")),
                Key("version", String(help="Gen2 actor version",
                                      FITS=('W_RVGEN2',
@@ -202,4 +202,23 @@ KeysDictionary('gen2', (4, 3),
                           help="State of autoguider")),
                
                Key("header", String(help="Gen2-supplied FITS header")),
+
+               Key("moon",
+                   Float(name="elevation",
+                         FITS=("MOON-EL", ""),
+                         help="Moon elevation at exposure start",
+                         units='deg'),
+                   Float(name="separation",
+                         FITS=("MOON-SEP", ""),
+                         help="Moon separation at exposure start",
+                         units='deg'),
+                   Float(name="illumination",
+                         FITS=("MOON-ILL", ""),
+                         help="Moon elevation at exposure start")),
+
+               Key("obsMethod",
+                   String(name="method",
+                          FITS=("OBS-MTHD", ""),
+                          help="Observing method (classical vs. queue)")
+               ),
 )
