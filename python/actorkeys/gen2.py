@@ -1,7 +1,7 @@
 # from opscore.protocols.keys import KeysDictionary
 # from opscore.protocols.types import Key, String, Float, Int
 
-KeysDictionary('gen2', (4, 4),
+KeysDictionary('gen2', (4, 5),
                Key("text", String(help="text for humans")),
                Key("version", String(help="Gen2 actor version",
                                      FITS=('W_RVGEN2',
@@ -215,6 +215,11 @@ KeysDictionary('gen2', (4, 4),
                    Float(name="illumination",
                          FITS=("MOON-ILL", ""),
                          help="Moon elevation at exposure start")),
+
+               Key("statusUpdate",
+                   Int(name="visit", help='assocated visit'),
+                   Int(name="sequenceNum", help='status sequence number within visit'),
+                   String(name="caller", help='who requested the status update')),
 
                Key("obsMethod",
                    String(name="method",
