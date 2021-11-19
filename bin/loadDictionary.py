@@ -24,11 +24,11 @@ def gatherAllDictionaries():
 def main(argv=None):
     """Command-line interface to load actorkey dictionary. """
     parser = argparse.ArgumentParser(description="load actorkey dictionary")
-    parser.add_argument("--actor", default=None, type=str, help="actorkey dictionary to load")
+    parser.add_argument('-l', '--actors', nargs='+',  default=None, help='actorkeys dictionary(ies) to load')
 
     args = parser.parse_args(argv)
 
-    toCheck = gatherAllDictionaries() if args.actor is None else [args.actor]
+    toCheck = gatherAllDictionaries() if args.actors is None else args.actors
 
     for actor in toCheck:
         keys.KeysDictionary.load(actor, forceReload=True)
