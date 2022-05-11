@@ -6,4 +6,6 @@ KeysDictionary('tests', (1, 1),
                Key("keytest3",
                    Enum("Open", "Closed", name="test"),
                    String(name="errors", help="human-oriented error string")),
+
+               Key("convergenceId", Int()),
                )
