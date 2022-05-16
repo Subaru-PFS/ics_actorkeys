@@ -1,6 +1,6 @@
 KeysDictionary(
     'ag',
-    (1, 8),
+    (1, 9),
     Key('text', String(), help='Human oriented message string',),
     Key('version', String(), help='Actor version string',),
     Key('guideErrors',
@@ -20,5 +20,9 @@ KeysDictionary(
         Float(name='dZ4', units='mm', help='Focus error (AGC4)'),
         Float(name='dZ5', units='mm', help='Focus error (AGC5)'),
         Float(name='dZ6', units='mm', help='Focus error (AGC6)'),
+    ),
+    Key('guideOffsets',
+        Float(name='dX', units='mm', help='X offset'),
+        Float(name='dY', units='mm', help='Y offset'),
     ),
 )
