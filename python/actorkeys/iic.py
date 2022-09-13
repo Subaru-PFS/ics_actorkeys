@@ -1,4 +1,4 @@
-KeysDictionary('iic', (1, 6),
+KeysDictionary('iic', (1, 7),
                Key("controllers", String(help='controllers list') * (1, None)),
                Key("text", String(), help='Stuff for humans'),
                Key('version', String(help="IIC actor version",
@@ -33,4 +33,6 @@ KeysDictionary('iic', (1, 6),
                    Float(name="dec", reprFmt="%0.6f"),
                    Float(name="pa", reprFmt="%0.6f"),
                    String(name="name")),
+               Key("pfsVisit",
+                   Int(name="spsVisit", help="current sps visit"), )
                )
