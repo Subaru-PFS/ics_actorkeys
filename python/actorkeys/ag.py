@@ -3,6 +3,7 @@ KeysDictionary(
     (1, 9),
     Key('text', String(), help='Human oriented message string',),
     Key('version', String(), help='Actor version string',),
+    Key('guideReady', Bool('0', '1'), help='Ready to guide',),
     Key('guideErrors',
         Int(name='exposureId', help='Exposure identifier'),
         Float(name='dRA', units='arcsec', help='Right ascension error'),
