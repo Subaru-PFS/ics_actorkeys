@@ -1,4 +1,4 @@
-KeysDictionary('iic', (1, 7),
+KeysDictionary('iic', (1, 8),
                Key("controllers", String(help='controllers list') * (1, None)),
                Key("text", String(), help='Stuff for humans'),
                Key('version', String(help="IIC actor version",
@@ -34,5 +34,8 @@ KeysDictionary('iic', (1, 7),
                    Float(name="pa", reprFmt="%0.6f"),
                    String(name="name")),
                Key("pfsVisit",
-                   Int(name="spsVisit", help="current sps visit"), )
+                   Int(name="spsVisit", help="current sps visit")),
+               Key("groupId",
+                   Int(name="gid", help="groupId"),
+                   String(name="name", help="groupName"))
                )
