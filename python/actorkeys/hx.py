@@ -1,4 +1,4 @@
-KeysDictionary("hx", (2, 1),
+KeysDictionary("hx", (2, 2),
                Key("controllers", String(help='controllers list') * (1, 2)),
                Key("text", String(), help='Stuff for humans'),
                Key('version', String(help="HX actor version",
@@ -72,6 +72,9 @@ KeysDictionary("hx", (2, 1),
                    String(name="nightDirectory"),
                    String(name="filename"),
                    help="all the parts making up the image file path. Suitable for os.path.join()"),
+
+               Key("filename",
+                   String(name="filename")),
 
                Key("spsFileIds",
                    String(name="cam", help="the camera name (e.g. b3)"),
