@@ -1,4 +1,4 @@
-KeysDictionary("hx", (1, 1),
+KeysDictionary("hx", (2, 1),
                Key("controllers", String(help='controllers list') * (1, 2)),
                Key("text", String(), help='Stuff for humans'),
                Key('version', String(help="HX actor version",
@@ -47,9 +47,16 @@ KeysDictionary("hx", (1, 1),
                        FITS=("W_H4NDRP",
                              "W_H4_NDROPS"))),
 
+               # readtimes=0,2022-10-07T09:02:56.845543Z,2022-10-07T09:03:07.702593Z,10.857
+               Key("readTimes",
+                   Int("visit", help="visit for ramp"),
+                   String("reset0Time", help="start time for first reset frame"),
+                   String("read0Time", help="start time for first read frame"),
+                   Float("readTime", help="single read time")),
+
                # hxread=/data/pfsx/2020-02-13/PFJB00469913.fits,1,1,0
                Key("hxread",
-                   String(name="filename", help="path to ramp file"),
+                   Int(name="visit", help="iit for ramp"),
                    Int("ramp", help="the current ramp number",
                        FITS=("W_H4RAMP",
                              "W_H4_RAMP_NUMBER")),
