@@ -154,7 +154,7 @@ KeysDictionary('gen2', (4, 7),
                Key("tel_adc",
                    String(name='name', help="ADC name",
                           FITS=('ADC-TYPE', '')),
-                   Float(name='angle', units='deg', help="ADC pos angle",
+                   Float(name='angle', units='mm', help="ADC pos angle",
                          FITS=('ADC-STR', ''))),
 
                Key("dome_env",
