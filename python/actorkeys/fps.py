@@ -12,6 +12,6 @@ KeysDictionary('fps', (1, 4),
                    Long(name='pfsDesign', help='the pfsDesign we are working on'),
                    Long(name='pfsConfig', help='the current pfsConfig for the PFI',
                         FITS=('W_PFSCFG', 'W_PFS_CONFIG_ID')),
-                   Int(name='visit0', help='the visit0 for the convergence')
+                   Int(name='visit0', help='the visit0 for the convergence'),
                    String(name='ConvergenceStatus', help='the current convergence status')),
 )
