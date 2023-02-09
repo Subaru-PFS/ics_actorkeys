@@ -1,4 +1,4 @@
-KeysDictionary('fps', (1, 4),
+KeysDictionary('fps', (1, 5),
                Key("text", String(help="text for humans")),
                Key('version', String(help="FPS actor version",
                                      FITS=("W_RVFPS",
@@ -9,8 +9,8 @@ KeysDictionary('fps', (1, 4),
                Key('pfsDesignId', Long(help="the loaded pfsDesignId",
                                        FITS=('W_PFDSGN', 'W_PFS_DESIGN_ID'))),
                Key('pfsConfig',
-                   Long(name='pfsDesign', help='the pfsDesign we are working on'),
-                   Long(name='pfsConfig', help='the current pfsConfig for the PFI',
-                        FITS=('W_PFSCFG', 'W_PFS_CONFIG_ID')),
-                   Int(name='visit0', help='the visit0 for the convergence')),
-)
+                   Long(name='pfsDesignId', FITS=('W_PFSCFG', 'W_PFS_CONFIG_ID'),
+                        help='identifier for the pfsDesign/pfsConfig file'),
+                   Int(name='visit0', help='the visit0 for the convergence'),
+                   Enum('Unknown', 'Preparing', 'inProgress', 'Done', name='status', help='convergence status'))
+               )
