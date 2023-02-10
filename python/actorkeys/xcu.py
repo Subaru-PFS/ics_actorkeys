@@ -1,4 +1,4 @@
-KeysDictionary("xcu", (11, 1),
+KeysDictionary("xcu", (11, 2),
                Key("controllers", String(help='controllers list') * (1, None)),
                Key('Text', String(), help='Stuff for humans'),
                Key('version', String(help="XCU actor version",
@@ -10,10 +10,10 @@ KeysDictionary("xcu", (11, 1),
 
                # State of cooling/pumping systems.
                Key("cryoMode",
-                   Enum("unknown",'offline', 'standby', 'pumpdown', 'cooldown', 'operation', 'warmup', 'bakeout',
-                        help="the state of the pumping/cooling system")),
+                   Enum('unknown', 'offline', 'standby', 'roughing', 'pumpdown', 'cooldown', 'operation', 'warmup',
+                        'bakeout', help="the state of the pumping/cooling system")),
 
-                # All cooler keys:
+               # All cooler keys:
                Key("coolerLoop",
                    Enum("ON","OFF","POWER",
                         FITS=('W_XCOOL1', 'XCU_COOLER1_STATE'),
@@ -282,7 +282,7 @@ KeysDictionary("xcu", (11, 1),
                Key("gvMask",
                    UInt(name="mask", reprFmt="0x%02x",
                         help="raw mask from the ADIO interface.")),
-                   
+
                Key("sampower", Bool('0', '1', name='enabled'),
                    FITS=('W_XSAMPW', 'XCU_SAM_POWER'),
                    help='SAM power state'),
