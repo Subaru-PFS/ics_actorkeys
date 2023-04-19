@@ -1,4 +1,4 @@
-KeysDictionary("hx", (2, 3),
+KeysDictionary("hx", (3, 0),
                Key("controllers", String(help='controllers list') * (1, 2)),
                Key("text", String(), help='Stuff for humans'),
                Key('version', String(help="HX actor version",
@@ -39,6 +39,7 @@ KeysDictionary("hx", (2, 3),
                                 "W_ASIC_CONFIGURATION_NAME"))),
 
                Key("irp",
+                   Bool(True, False, name='enabled', help='whether IRP is enabled.'),
                    Int(name="ratio",
                           help="number of science pixels per ref pixel Or 0",
                           FITS=("W_H4IRPN",
@@ -47,6 +48,9 @@ KeysDictionary("hx", (2, 3),
                           help="number of science pixels before ref. pixel",
                           FITS=("W_H4IRPO",
                                 "W_IRP_OFFSET"))),
+               Key('readTime',
+                   Float(name='readTime',
+                         help='time to read a full read, including optional IRP')),
 
                # ramp=1,1,1,3,0
                Key("ramp",
