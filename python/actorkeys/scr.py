@@ -1,6 +1,6 @@
 KeysDictionary(
     'scr',
-    (1, 6),
+    (1, 7),
     Key('text', String(), help='Human oriented message string'),
     Key('version', String(help='SCR Actor version',
                           FITS=('W_RVSCR', 'W_SCRACTOR_VERSION'))),
