@@ -1,6 +1,6 @@
 KeysDictionary(
     'ag',
-    (1, 9),
+    (1, 10),
     Key('text', String(), help='Human oriented message string',),
     Key('version', String(), help='Actor version string',),
     Key('guideReady', Bool('0', '1'), help='Ready to guide',),
@@ -12,6 +12,7 @@ KeysDictionary(
         Float(name='dAz', units='arcsec', help='Azimuth error'),
         Float(name='dAlt', units='arcsec', help='Altitude error'),
         Float(name='dZ', units='mm', help='Focus error'),
+        Float(name='dScale', help='Scale error'),
     ),
     Key('focusErrors',
         Int(name='exposureId', help='Exposure identifier'),
