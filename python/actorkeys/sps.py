@@ -1,4 +1,4 @@
-KeysDictionary('sps', (1, 8),
+KeysDictionary('sps', (1, 9),
                Key('text', String(help='text for humans')),
                Key('version', String(help='SPS actor version',
                                      FITS=('W_RVSPS', 'W_SPSACTOR_VERSION'))),
@@ -33,6 +33,9 @@ KeysDictionary('sps', (1, 8),
                    Int(name='pulseOn', units='ms', invalid=-1, help='bia pulse high duration',
                        FITS=('W_BIAON', 'W_SPS_BIA_PULSE_ON')),
                    Int(name='pulseOff', units='ms', invalid=-1, help='bia pulse low duration',
-                       FITS=('W_BIAOFF', 'W_SPS_BIA_PULSE_OFF')))
+                       FITS=('W_BIAOFF', 'W_SPS_BIA_PULSE_OFF'))),
+               Key('pfiShutters',
+                   Enum('close', 'open', 'undef', help='declaring when any PFI-connected shutter becomes open '
+                                                       'and when all PFI-connected shutters become closed.'))
 
                )
