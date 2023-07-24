@@ -1,4 +1,4 @@
-KeysDictionary("xcu", (11, 2),
+KeysDictionary("xcu", (11, 3),
                Key("controllers", String(help='controllers list') * (1, None)),
                Key('Text', String(), help='Stuff for humans'),
                Key('version', String(help="XCU actor version",
@@ -7,6 +7,7 @@ KeysDictionary("xcu", (11, 2),
                Key('version_tron_actorcore', String()),
                Key('version_pfs_utils', String()),
                Key('version_ics_xcu_rtdadio', String()),
+               Key('roughActor', String(), help='which roughActor is connected to this camera.'),
 
                # State of cooling/pumping systems.
                Key("cryoMode",
