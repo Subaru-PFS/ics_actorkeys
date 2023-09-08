@@ -1,7 +1,13 @@
-# from opscore.protocols.keys import KeysDictionary
-# from opscore.protocols.types import Key, String, Float, Int
+# Just for editors, since opscore annoyingly imports everything before
+# importing this file
+#
+try:
+    KeysDictionary
+except NameError:
+    from opscore.protocols.keys import KeysDictionary, Key
+    from opscore.protocols.types import String, Float, Int, Enum
 
-KeysDictionary('gen2', (4, 7),
+KeysDictionary('gen2', (4, 8),
                Key("text", String(help="text for humans")),
                Key("version", String(help="Gen2 actor version",
                                      FITS=('W_RVGEN2',
@@ -252,8 +258,11 @@ KeysDictionary('gen2', (4, 7),
                Key("obsMethod",
                    String(name="method",
                           FITS=("OBS-MTHD", ""),
-                          help="Observing method (classical vs. queue)")
-               ),
+                          help="Observing method (classical vs. queue)")),
+               Key("domeShutter",
+                   Enum("open", "closed", "unknown",
+                        name="state", help="position of the dome shutters",
+                        FITS=("W_TSHUTR", "W_GEN2_DOME_SHUTTER_POS"))),
                Key("domeLights",
                    Int(name="mask", help="which dome lamps are on",
                        FITS=("W_TDLGHT", "W_GEN2_DOME_LIGHT_MASK"))),
