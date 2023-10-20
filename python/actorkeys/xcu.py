@@ -1,11 +1,11 @@
 # Just for editors, since opscore annoyingly imports everything before
 # importing this file
 #
-try:
-    KeysDictionary
-except NameError:
-    from opscore.protocols.keys import KeysDictionary
-    from opscore.protocols.types import Key, String, Float, Int, Enum, UInt, Bool
+#try:
+#    KeysDictionary
+#except NameError:
+#    from opscore.protocols.keys import KeysDictionary
+#    from opscore.protocols.types import Key, String, Float, Int, Enum, UInt, Bool
 
 KeysDictionary("xcu", (11, 3),
                Key("controllers", String(help='controllers list') * (1, None)),
