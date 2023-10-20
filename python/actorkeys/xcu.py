@@ -7,7 +7,7 @@
 #    from opscore.protocols.keys import KeysDictionary
 #    from opscore.protocols.types import Key, String, Float, Int, Enum, UInt, Bool
 
-KeysDictionary("xcu", (11, 3),
+KeysDictionary("xcu", (11, 4),
                Key("controllers", String(help='controllers list') * (1, None)),
                Key('Text', String(), help='Stuff for humans'),
                Key('version', String(help="XCU actor version",
