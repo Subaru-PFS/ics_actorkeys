@@ -7,7 +7,7 @@
 #    from opscore.protocols.keys import KeysDictionary
 #    from opscore.protocols.types import Key, String, Float, Int, Enum, UInt, Bool
 
-KeysDictionary("xcu", (11, 4),
+KeysDictionary("xcu", (11, 5),
                Key("controllers", String(help='controllers list') * (1, None)),
                Key('Text', String(), help='Stuff for humans'),
                Key('version', String(help="XCU actor version",
@@ -20,7 +20,7 @@ KeysDictionary("xcu", (11, 4),
 
                # State of cooling/pumping systems.
                Key("cryoMode",
-                   Enum('unknown', 'offline', 'standby', 'roughing', 'pumpdown', 'cooldown', 'operation', 'warmup',
+                   Enum('unknown', 'offline', 'standby', 'roughing', 'pumpdown', 'ionpumping', 'cooldown', 'operation', 'warmup',
                         'bakeout', help="the state of the pumping/cooling system")),
 
                # All cooler keys:
