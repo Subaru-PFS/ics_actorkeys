@@ -7,7 +7,7 @@
 #    from opscore.protocols.keys import KeysDictionary
 #    from opscore.protocols.types import Key, String, Float, Int, Enum, UInt, Bool
 
-KeysDictionary("xcu", (11, 5),
+KeysDictionary("xcu", (11, 7),
                Key("controllers", String(help='controllers list') * (1, None)),
                Key('Text', String(), help='Stuff for humans'),
                Key('version', String(help="XCU actor version",
@@ -277,6 +277,21 @@ KeysDictionary("xcu", (11, 5),
                          FITS=('W_XHP2FR', 'XCU_SPREADER_HEATER_FRACTION'),
                          help='Spreader heater power: 0 or 1'),
                    help='status of the heaters.'),
+
+               Key("heater1",
+                   String(name='name', help='device being heated'),
+                   String(name='mode', help='heater loop mode: IDLE,POWER,TEMP'),
+                   Float(name='tempSetpoint', help='if in temp mode, the setpoint'),
+                   Float(name='powerSetpoint', help='if in power mode, the commanded power fraction'),
+                   Float(name='fraction', help='the current power fraction'),
+                   Float(name='temp', help='measured temperature of the associated sensor')),
+               Key("heater2",
+                   String(name='name', help='device being heated'),
+                   String(name='mode', help='heater loop mode: IDLE,POWER,TEMP'),
+                   Float(name='tempSetpoint', help='if in temp mode, the setpoint'),
+                   Float(name='powerSetpoint', help='if in power mode, the commanded power fraction'),
+                   Float(name='fraction', help='the current power fraction'),
+                   Float(name='temp', help='measured temperature of the associated sensor')),
 
                Key("gatevalve",
                    UInt(),
