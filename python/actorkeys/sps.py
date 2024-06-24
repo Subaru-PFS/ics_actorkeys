@@ -1,4 +1,4 @@
-KeysDictionary('sps', (1, 9),
+KeysDictionary('sps', (1, 10),
                Key('text', String(help='text for humans')),
                Key('version', String(help='SPS actor version',
                                      FITS=('W_RVSPS', 'W_SPSACTOR_VERSION'))),
@@ -36,6 +36,8 @@ KeysDictionary('sps', (1, 9),
                        FITS=('W_BIAOFF', 'W_SPS_BIA_PULSE_OFF'))),
                Key('pfiShutters',
                    Enum('close', 'open', 'undef', help='declaring when any PFI-connected shutter becomes open '
-                                                       'and when all PFI-connected shutters become closed.'))
-
+                                                       'and when all PFI-connected shutters become closed.')),
+               Key("pfsConfigFinalized",
+                   Int(name="visit"),
+                   Bool('False', 'True', name='doIngest', help='pfsConfig finalized and ready to be ingested.')),
                )
