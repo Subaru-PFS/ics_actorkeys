@@ -1,4 +1,4 @@
-KeysDictionary('peb', (1, 5),
+KeysDictionary('peb', (1, 6),
                Key("controllers", String(help='controllers list') * (1, None)),
                Key("text", String(help="text for humans")),
                Key("version", String(help="EUPS/git version")),
