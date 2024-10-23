@@ -1,4 +1,4 @@
-KeysDictionary('sps', (1, 11),
+KeysDictionary('sps', (1, 12),
                Key('text', String(help='text for humans')),
                Key('version', String(help='SPS actor version',
                                      FITS=('W_RVSPS', 'W_SPSACTOR_VERSION'))),
@@ -37,7 +37,7 @@ KeysDictionary('sps', (1, 11),
                Key('pfiShutters',
                    Enum('close', 'open', 'undef', help='declaring when any PFI-connected shutter becomes open '
                                                        'and when all PFI-connected shutters become closed.')),
-               Key("ingestPfsConfig",
+               Key("fiberIllumination",
                    Int(name="visit"),
-                   String(name="filepath")),
+                   UInt(name="status", reprFmt="0x%02x"), help='sci/eng fiber illuminated bits for each spectrograph')
                )
