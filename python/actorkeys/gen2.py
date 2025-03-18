@@ -7,7 +7,8 @@
 #    from opscore.protocols.keys import KeysDictionary, Key
 #    from opscore.protocols.types import String, Float, Int, Enum
 
-KeysDictionary('gen2', (4, 8),
+KeysDictionary('gen2', (4, 9),
+               Key("controllers", String(help='controllers list') * (1, None)),
                Key("text", String(help="text for humans")),
                Key("version", String(help="Gen2 actor version",
                                      FITS=('W_RVGEN2',
