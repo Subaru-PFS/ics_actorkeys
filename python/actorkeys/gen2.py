@@ -311,15 +311,14 @@ KeysDictionary('gen2', (4, 10),
                    Float(name="lamp4", help="Measured ring lamp #4",
                          units="V",
                          FITS=("W_TFF4VV", "W_GEN2_RING_LAMP4_MEAS_V"))),
-               # alert={alertId},{alertName},{severity},{qstr(description)},{qstr(detail)}
                Key("alert",
                    String(name="i",
                           help="Gen2 ID for the alert. Can be used to modify/clear alert."),
-                   String(name="name", help="name for the alert")),
+                   String(name="name", help="name for the alert"),
                    Int('timestamp', help='Unix seconds for this change'),
                    Enum('debug', 'normal', 'ok', 'info', 'warning', 'error', 'critical',
-                        name="severity", help="severity")),
-                   String(name="description", help="description of the alert")),
+                        name="severity", help="severity"),
+                   String(name="description", help="description of the alert"),
                    String(name="detail", help="details of the alert")),
 
                )
