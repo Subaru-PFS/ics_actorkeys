@@ -7,7 +7,7 @@
 #    from opscore.protocols.keys import KeysDictionary, Key
 #    from opscore.protocols.types import String, Float, Int, Enum
 
-KeysDictionary('gen2', (4, 10),
+KeysDictionary('gen2', (4, 11),
                Key("controllers", String(help='controllers list') * (1, None)),
                Key("text", String(help="text for humans")),
                Key("version", String(help="Gen2 actor version",
@@ -264,6 +264,12 @@ KeysDictionary('gen2', (4, 10),
                    Enum("open", "closed", "unknown",
                         name="state", help="position of the dome shutters",
                         FITS=("W_TSHUTR", "W_GEN2_DOME_SHUTTER_POS"))),
+               Key("domeVents",
+                   Enum("open", "closed", "partial", "unknown",
+                        name="allVents", help="composite of all the dome vents"),
+                   Enum("open", "closed", "partial", "unknown",
+                        name="obsFloorVents", help="composite of the observing floor vents",
+                        FITS=("W_TVNTOB", "W_GEN2_DOME_FLOOR_VENTS"))),
                Key("domeLights",
                    Int(name="mask", help="which dome lamps are on",
                        FITS=("W_TDLGHT", "W_GEN2_DOME_LIGHT_MASK"))),
