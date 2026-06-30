@@ -1,4 +1,4 @@
-KeysDictionary('enu', (5, 9),
+KeysDictionary('enu', (5, 10),
                Key("controllers", String(help='controllers list') * (1, None)),
                Key('text', String(help='text for humans')),
                Key('instConfig', String(help='instrument config filepath')),
@@ -135,6 +135,11 @@ KeysDictionary('enu', (5, 9),
                    Int(name='strobeDuty', units='percent', help='bia strobe duty(100:continuous)'),
                    Int(name='pulseOn', units='ms', help='pulse high duration'),
                    Int(name='pulseOff', units='ms', help='pulse low duration')),
+
+               Key('biaCallback',
+                   Bool('0', '1', name='armed', help='1 if bia is driven by mcs.exposureState'),
+                   Enum('reading', 'done', name='offTrigger',
+                        help='mcs.exposureState value that turns bia off')),
 
                Key('photores',
                    Int(help='bia photo resistance 1'),
