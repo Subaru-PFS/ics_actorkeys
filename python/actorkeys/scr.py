@@ -56,10 +56,10 @@ KeysDictionary(
         help='Dew point and relative humidity inside the clean room'
     ),
     Key('scrTemps',
-        Float(name='bench1', units='degC', help='Bench 1'),
-        Float(name='bench2', units='degC', help='Bench 2'),
-        Float(name='bench3', units='degC', help='Bench 3'),
-        Float(name='bench4', units='degC', help='Bench 4'),
+        Float(name='bench1', units='degC', help='Rack 1'),
+        Float(name='bench2', units='degC', help='Rack 2'),
+        Float(name='bench3', units='degC', help='Rack 3'),
+        Float(name='bench4', units='degC', help='Rack 4'),
         Float(name='hex1In', units='degC', help='Heat exchanger 1 intake'),
         Float(name='hex2In', units='degC', help='Heat exchanger 2 intake'),
         Float(name='hex3In', units='degC', help='Heat exchanger 3 intake'), # reordered
@@ -73,7 +73,7 @@ KeysDictionary(
         Float(name='ceiling3', units='degC', help='Ceiling 3'),
         Float(name='ceiling4', units='degC', help='Ceiling 4'),
         Float(name='bottom', units='degC', help='Outside, bottom of the clean room'),
-        Float(name='topRack', units='degC', help='Outside, rack-side, top of the clean room'),
+        Float(name='topRack', units='degC', help='Rack 5'),
         Float(name='topEnt', units='degC', help='Outside, entrance-side, top of the clean room'),
         help='Air temperatures inside and outside the clean room'
     ),
