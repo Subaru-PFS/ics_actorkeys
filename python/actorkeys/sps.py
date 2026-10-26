@@ -1,4 +1,4 @@
-KeysDictionary('sps', (1, 12),
+KeysDictionary('sps', (1, 13),
                Key('text', String(help='text for humans')),
                Key('version', String(help='SPS actor version',
                                      FITS=('W_RVSPS', 'W_SPSACTOR_VERSION'))),
@@ -39,5 +39,11 @@ KeysDictionary('sps', (1, 12),
                                                        'and when all PFI-connected shutters become closed.')),
                Key("fiberIllumination",
                    Int(name="visit"),
-                   UInt(name="status", reprFmt="0x%02x"), help='sci/eng fiber illuminated bits for each spectrograph')
+                   UInt(name="status", reprFmt="0x%02x"),
+                   help='sci/eng fiber illuminated bits for each spectrograph'),
+               Key("exposureTimings",
+                   Int(name="visit"),
+                   String(name="startedAt", help='earliest dateobs, UTC ISO-formatted'),
+                   String(name="endedAt", help='latest dateobs + exptime, UTC ISO-formatted'),
+                   help='integration window over the spectrograph modules that exposed')
                )
