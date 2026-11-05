@@ -1,4 +1,4 @@
-KeysDictionary('fps', (1, 6),
+KeysDictionary('fps', (1, 7),
                Key("text", String(help="text for humans")),
                Key('version', String(help="FPS actor version",
                                      FITS=("W_RVFPS",
@@ -14,4 +14,5 @@ KeysDictionary('fps', (1, 6),
                    Int(name='visit0', help='the visit0 for the convergence'),
                    Enum('Unknown', 'Preparing', 'inProgress', 'Done', name='ConvergenceStatus', help='convergence status')),
                Key('fpsDesignId', Long(help="fps generated pfsDesignId")),
+               Key('blindMoveCalibId', Int(help="blind-move calibration inserted by calibrateBlindMove")),
                )
