@@ -1,4 +1,4 @@
-KeysDictionary('drp', (1, 3),
+KeysDictionary('drp', (1, 4),
                Key('text', String(help='text for humans')),
                Key('ingest', String(name='filepath', help='ingested exposure filepath')),
                Key('detrend', String(name='filepath', help='detrended exposure filepath')),
@@ -19,5 +19,11 @@ KeysDictionary('drp', (1, 3),
                    Int(name="returnCode", help="command return code"),
                    String(name="statusStr", help="command status string"),
                    Float(name='timing', units="s", help='command timing in seconds')),
+               Key('pfsArmStatus',
+                   Int(name="visit", help="the PFS visit"),
+                   String(name="arm", help="arm of the pfsArm (b, r, m, n)"),
+                   Int(name="spectrograph", help="spectrograph of the pfsArm"),
+                   String(name="run", help="butler run holding the pfsArm"),
+                   Float(name='timing', units="s", help='seconds since the reduction started')),
 
                )
